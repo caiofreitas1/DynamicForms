@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -64,7 +65,7 @@ fun FormEntryScreen(
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
-                title = { Text(form?.title ?: "Formulário") },
+                title = { Text(form?.title ?: "Form") },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
                     titleContentColor = MaterialTheme.colorScheme.primary
@@ -73,7 +74,7 @@ fun FormEntryScreen(
                     IconButton(onClick = onBack) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Voltar"
+                            contentDescription = "Back"
                         )
                     }
                 }
@@ -84,6 +85,7 @@ fun FormEntryScreen(
                 onSaveClicked = {
                     scope.launch {
                         viewModel.saveEntry()
+                        onBack()
                     }
                 }
             )
@@ -141,6 +143,7 @@ fun SaveButtonBar(onSaveClicked: () -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
+            .navigationBarsPadding()
             .padding(16.dp),
         contentAlignment = Alignment.Center
     ) {
@@ -211,7 +214,7 @@ fun DropdownField(
     onFieldValueChanged: (String) -> Unit
 ) {
     var expanded by remember { mutableStateOf(false) }
-    val selectedOptionLabel = field.options.find { it.value == value }?.label ?: "Selecione..."
+    val selectedOptionLabel = field.options.find { it.value == value }?.label ?: "Select..."
 
     Column(
         modifier = Modifier

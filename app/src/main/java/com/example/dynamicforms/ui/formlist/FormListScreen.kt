@@ -50,7 +50,7 @@ fun FormListScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Formulários Disponíveis") },
+                title = { Text("Available Forms") },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
                     titleContentColor = MaterialTheme.colorScheme.primary
@@ -68,12 +68,12 @@ fun FormListScreen(
                 Column(horizontalAlignment = CenterHorizontally) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Outlined.List,
-                        contentDescription = "Ícone de lista vazia",
+                        contentDescription = "Empty icon list",
                         modifier = Modifier.size(64.dp)
                     )
                     Spacer(modifier = Modifier.height(16.dp))
                     Text(
-                        text = "Nenhum formulário disponível",
+                        text = "Any forms available",
                         style = MaterialTheme.typography.bodyLarge
                     )
                 }

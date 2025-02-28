@@ -1,4 +1,4 @@
-package com.example.dynamicforms.presentation.navigation
+package com.example.dynamicforms.ui.navigation
 
 import FormEntryScreen
 import androidx.compose.runtime.Composable
