@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DynamicForms</string>
+    <string name="form_entries_title">Form Entries: %s</string>
+    <string name="back">Back</string>
+    <string name="add_new_entry">New Entry</string>
+    <string name="no_entries_found">No entry found</string>
 </resources>

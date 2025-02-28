@@ -34,4 +34,7 @@ object DataBaseModule {
 
     @Provides
     fun provideOptionDao(db: AppDataBase) = db.optionDao()
+
+    @Provides
+    fun provideEntryDao(db: AppDataBase) = db.entryDao()
 }
