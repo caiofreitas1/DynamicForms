@@ -98,7 +98,7 @@ fun FormEntryScreen(
                     .padding(innerPadding),
                 contentAlignment = Alignment.Center
             ) {
-                Text("Carregando ou Formulário não encontrado...")
+                Text("Loading")
             }
         } else {
             LazyColumn(

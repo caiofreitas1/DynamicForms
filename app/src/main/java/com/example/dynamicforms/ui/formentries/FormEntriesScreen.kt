@@ -162,10 +162,10 @@ fun EntryItem(entry: Entry) {
                 )
             }
 
-            Divider(
+            HorizontalDivider(
                 modifier = Modifier.padding(vertical = 8.dp),
-                color = MaterialTheme.colorScheme.outlineVariant,
-                thickness = 1.dp
+                thickness = 1.dp,
+                color = MaterialTheme.colorScheme.outlineVariant
             )
 
             Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
